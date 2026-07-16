@@ -1,0 +1,1001 @@
+Return ID,Customer Name,Product Name,Status,Pincode
+1943,Jairaj D’Alia,Drone,Approved,428588
+1944,Nisha Rajagopal,AC,Rejected,144926
+1945,Adweta Lalla,Air Purifier,Rejected,515834
+1946,Xiti Deo,Drone,Approved,897694
+1947,Tanvi Arora,AC,Approved,590585
+1948,Utkarsh Loyal,AC,Rejected,346508
+1949,Ayush Bose,Earbuds,Approved,470156
+1950,Lakshmi Seth,Air Purifier,Rejected,667737
+1951,Ekaja Jain,AC,Rejected,987397
+1952,Shravya Khanna,Drone,Rejected,869943
+1953,Avni Nagy,CPU,Rejected,685992
+1954,Harini Swamy,Camera,Pending,786064
+1955,Udyati Natt,Camera,Rejected,220485
+1956,Jalsa Sane,Drone,Rejected,404227
+1957,Aadhya Dugar,CPU,Approved,328032
+1958,Advaith Khosla,Charger,Pending,003919
+1959,Gautam Tank,AC,Rejected,395483
+1960,Siya Comar,Charger,Rejected,013528
+1961,Mahika Ganesh,CPU,Pending,010658
+1962,Triya Sule,Drone,Rejected,327447
+1963,Maanav Pal,Air Purifier,Approved,574687
+1964,Avni Jani,Earbuds,Approved,850015
+1965,Ethan Rajagopalan,Charger,Rejected,406524
+1966,Jackson Kala,CPU,Rejected,916547
+1967,Arunima Chandran,Earbuds,Approved,837470
+1968,Noah Nayar,Air Purifier,Pending,428624
+1969,Imaran Mukhopadhyay,Earbuds,Approved,040955
+1970,Ekavir Peri,Drone,Approved,238628
+1971,Oliver Pal,Air Purifier,Rejected,471553
+1972,Daksha Boase,Air Purifier,Approved,642383
+1973,Zansi Kale,Camera,Rejected,751987
+1974,Dev Anand,Camera,Rejected,338930
+1975,Chaitanya Mallick,Earbuds,Rejected,639934
+1976,Mugdha Cherian,Charger,Approved,751412
+1977,Nandini Seth,Drone,Rejected,579111
+1978,Indrajit Kuruvilla,Drone,Rejected,169162
+1979,Kamala Rattan,Earbuds,Rejected,318309
+1980,Suhani Lad,Air Purifier,Approved,353192
+1981,Samarth Madan,CPU,Pending,299501
+1982,Shaurya Basak,Earbuds,Approved,750380
+1983,Upkaar Samra,Charger,Approved,470259
+1984,Chandani Bhattacharyya,Earbuds,Approved,754894
+1985,Amol Mohan,Earbuds,Approved,727577
+1986,Riya Kant,Drone,Rejected,627874
+1987,Vinaya Raju,Air Purifier,Rejected,642356
+1988,Kritika Gandhi,Camera,Approved,405246
+1989,Dalbir Kara,CPU,Approved,838701
+1990,Arunima Ramachandran,Earbuds,Approved,004214
+1991,Lajita Karpe,Camera,Rejected,870632
+1992,Azad Babu,Earbuds,Pending,097522
+1993,Chandani Misra,CPU,Approved,988428
+1994,Harish Bera,Earbuds,Approved,895573
+1995,Vedhika Dasgupta,Drone,Approved,515687
+1996,Ijaya Hari,Air Purifier,Rejected,678992
+1997,Oviya Konda,Drone,Rejected,376928
+1998,Agastya Nadig,Charger,Pending,863672
+1999,Christopher D’Alia,Earbuds,Approved,536002
+2000,Indrajit Bains,Charger,Approved,344291
+2001,Omaja Mandal,Drone,Approved,029655
+2002,Nicholas Kaur,Air Purifier,Rejected,601190
+2003,Sanya Sheth,Drone,Rejected,129711
+2004,Vritti Butala,Charger,Approved,226045
+2005,Rayaan Atwal,Camera,Rejected,282043
+2006,Vivaan Deep,Camera,Pending,039052
+2007,Nachiket Samra,Drone,Approved,710734
+2008,Meera Agarwal,CPU,Rejected,635013
+2009,Vasudha Maharaj,CPU,Rejected,485636
+2010,Oviya Bhatnagar,CPU,Pending,042871
+2011,Lavanya Chandra,Charger,Pending,997140
+2012,Kavya Sethi,Earbuds,Pending,599728
+2013,Nikita Sane,CPU,Approved,092102
+2014,Chaaya Chowdhury,Camera,Approved,659163
+2015,Victor Bhatt,Charger,Pending,862463
+2016,Mekhala Doshi,Earbuds,Rejected,386473
+2017,Jatin Sani,Drone,Approved,041765
+2018,Jonathan Ganesh,Air Purifier,Rejected,894488
+2019,Diya Bedi,Camera,Approved,014048
+2020,Barkha Chaudry,Air Purifier,Approved,155356
+2021,Eiravati Sachdeva,Charger,Pending,392522
+2022,Jacob Kale,Air Purifier,Rejected,842903
+2023,Reva Babu,Earbuds,Rejected,062387
+2024,Avi Ahuja,Earbuds,Approved,673622
+2025,Tripti Chowdhury,Camera,Approved,170347
+2026,Qarin Jaggi,Earbuds,Rejected,022095
+2027,Ganga Pandya,Camera,Approved,894641
+2028,Pallavi Tak,Air Purifier,Rejected,230900
+2029,Andrew Dugar,AC,Rejected,398675
+2030,Reyansh Pandit,CPU,Rejected,398785
+2031,Hamsini Anand,Camera,Approved,118385
+2032,Hredhaan Chatterjee,Air Purifier,Approved,034665
+2033,Chatresh Raju,Drone,Approved,880320
+2034,Vritti Agarwal,Charger,Rejected,836382
+2035,Wahab Varghese,Charger,Rejected,830926
+2036,Bhavini Sheth,Charger,Approved,088553
+2037,Qushi Dar,Camera,Rejected,741100
+2038,Rehaan Subramanian,CPU,Approved,738261
+2039,Varsha Padmanabhan,Earbuds,Approved,871990
+2040,Tanveer Mammen,Air Purifier,Approved,787425
+2041,Yatan Dash,Earbuds,Approved,314657
+2042,Frado Kalita,Drone,Rejected,826726
+2043,Watika Chahal,CPU,Pending,224061
+2044,Neelima Bhargava,Charger,Approved,592293
+2045,Ojas Gera,Drone,Approved,923055
+2046,Neelima Varughese,CPU,Rejected,584199
+2047,Krishna Gara,Drone,Pending,653973
+2048,Urvashi Dave,AC,Rejected,235311
+2049,Aadhya Bose,Drone,Approved,552747
+2050,Imaran Kale,AC,Approved,070113
+2051,Pranav Johal,Camera,Approved,550979
+2052,Radhika Manne,AC,Approved,049622
+2053,Isha Taneja,Earbuds,Rejected,792889
+2054,Eta Dasgupta,Earbuds,Rejected,919268
+2055,Krishna Varughese,CPU,Rejected,771271
+2056,Aarav Dhar,Charger,Pending,655958
+2057,Rishi Vala,Camera,Rejected,702056
+2058,Harish Kapur,Charger,Rejected,737890
+2059,Yasti Sunder,Air Purifier,Approved,629064
+2060,Girik Chaudhry,Drone,Rejected,717973
+2061,Panini Bhargava,Camera,Rejected,180592
+2062,Mekhala Walia,Earbuds,Pending,986484
+2063,Neelima Varghese,Camera,Rejected,883485
+2064,Fariq Dasgupta,Charger,Approved,930562
+2065,Shaurya Iyengar,Earbuds,Pending,499881
+2066,Charan Wali,Camera,Approved,809889
+2067,Wakeeta Goel,AC,Approved,617699
+2068,Eta Mittal,Charger,Approved,602232
+2069,Pranit Chander,Earbuds,Rejected,752693
+2070,Ojasvi Mahal,Earbuds,Approved,541688
+2071,Manya Rout,Air Purifier,Approved,234945
+2072,Chaitanya Mitter,AC,Rejected,441529
+2073,Kashvi Varkey,Air Purifier,Rejected,465636
+2074,Tanmayi Kalla,Camera,Approved,102246
+2075,Aachal Parmar,AC,Approved,806249
+2076,Nitesh Biswas,Camera,Approved,397962
+2077,Prisha Mander,Earbuds,Approved,965584
+2078,Naksh Yadav,Charger,Approved,520844
+2079,Vasudha Ram,Earbuds,Approved,586558
+2080,Anvi Tata,Drone,Approved,418111
+2081,Ayush Madan,Air Purifier,Rejected,358082
+2082,Isaac Sengupta,Earbuds,Approved,502301
+2083,Lila Date,Charger,Approved,479972
+2084,Faraj Agrawal,Earbuds,Rejected,566746
+2085,Chandran Mishra,Drone,Approved,670220
+2086,Krishna Kala,Charger,Rejected,356540
+2087,Sara Bhattacharyya,Earbuds,Rejected,094257
+2088,Girindra Jain,Charger,Approved,548876
+2089,Yashica Wali,Drone,Approved,073491
+2090,Yahvi Dada,Earbuds,Approved,003209
+2091,Charita Dada,Air Purifier,Approved,850143
+2092,Ayushman Nagarajan,Air Purifier,Rejected,632330
+2093,Ishita Barad,CPU,Rejected,926019
+2094,Abhiram Chana,Drone,Approved,866961
+2095,Karan Dhar,Earbuds,Rejected,560903
+2096,Henry Mitter,Earbuds,Pending,645493
+2097,Utkarsh Nath,Camera,Approved,703214
+2098,Radha Bains,CPU,Approved,422346
+2099,Timothy Rai,Earbuds,Approved,913788
+2100,Jeet Radhakrishnan,Camera,Approved,914214
+2101,Bhavya Shankar,Camera,Approved,280781
+2102,Ayushman Kota,AC,Rejected,006574
+2103,Osha Som,Air Purifier,Pending,039975
+2104,Hamsini Verma,Air Purifier,Rejected,588323
+2105,Chasmum Sani,Earbuds,Rejected,712979
+2106,Vedika Gade,Drone,Rejected,119521
+2107,Warjas Balan,Drone,Rejected,429959
+2108,Diya Gara,Drone,Approved,746157
+2109,Aachal Devi,Camera,Pending,255244
+2110,Patrick Hegde,Air Purifier,Rejected,569414
+2111,Brinda Kannan,CPU,Rejected,763264
+2112,Faraj Jani,Air Purifier,Approved,223183
+2113,Matthew Prashad,Air Purifier,Approved,702266
+2114,Gopal Biswas,Camera,Rejected,633623
+2115,Aayush Mukhopadhyay,Camera,Approved,837207
+2116,Patrick Rajagopal,Camera,Rejected,388706
+2117,Naveen Bala,Charger,Approved,655307
+2118,Lipika Sahota,Air Purifier,Rejected,746559
+2119,Champak Viswanathan,AC,Approved,506508
+2120,Garima Rege,Camera,Pending,536887
+2121,Kashvi Balan,Earbuds,Rejected,774764
+2122,Zansi Yohannan,Air Purifier,Rejected,253136
+2123,Ayushman Mani,Drone,Approved,740734
+2124,Nitara Narang,AC,Approved,390709
+2125,Upasna Grover,Drone,Rejected,195345
+2126,Banjeet Sanghvi,Air Purifier,Rejected,017135
+2127,Ucchal Kalita,Earbuds,Approved,406505
+2128,Atharv Raghavan,Earbuds,Approved,173798
+2129,Eesha Parsa,CPU,Pending,177807
+2130,Forum Sahni,AC,Approved,587766
+2131,Nandini Nayak,Drone,Rejected,466250
+2132,Ayushman Bath,Earbuds,Rejected,938235
+2133,Jack Randhawa,Air Purifier,Approved,367188
+2134,Gavin Ratta,Drone,Rejected,998804
+2135,Jackson D’Alia,Earbuds,Pending,663510
+2136,Caleb Narula,Earbuds,Approved,345689
+2137,Chandresh Palla,Drone,Approved,666774
+2138,Yashawini Gokhale,Earbuds,Pending,419492
+2139,Ojasvi Iyer,AC,Approved,837509
+2140,Ronith Tripathi,Drone,Rejected,359260
+2141,Hamsini Nagarajan,Earbuds,Approved,988501
+2142,Pahal Tank,Earbuds,Pending,096258
+2143,Gaurav Biswas,Charger,Pending,411237
+2144,Jason Dara,Earbuds,Rejected,711735
+2145,Mugdha Vora,Charger,Pending,042389
+2146,Triya Garde,Air Purifier,Rejected,954824
+2147,Rudra Ghosh,Camera,Pending,828898
+2148,Vinaya Hegde,Earbuds,Rejected,183168
+2149,Quincy Bahri,CPU,Pending,413426
+2150,Fariq Dada,Earbuds,Pending,034585
+2151,Urvashi Parekh,Camera,Rejected,957068
+2152,Darpan Dua,Charger,Rejected,073852
+2153,Girik Jha,AC,Approved,769573
+2154,Jacob Srivastava,Camera,Rejected,962020
+2155,Veer Kota,Charger,Approved,363286
+2156,Udyati Chada,Earbuds,Rejected,155549
+2157,Vansha Ramaswamy,CPU,Pending,557829
+2158,Ekaraj Sami,Drone,Approved,373168
+2159,Bahadurjit Rout,Air Purifier,Approved,902695
+2160,Hemani Ranganathan,Camera,Approved,692140
+2161,Triveni Rama,Charger,Approved,050916
+2162,William Kanda,Charger,Pending,649479
+2163,Nachiket Shroff,Camera,Approved,359542
+2164,Ayaan Vig,CPU,Rejected,005082
+2165,Hiral Khurana,Air Purifier,Approved,487866
+2166,Arin Narain,Earbuds,Approved,655510
+2167,Lavanya Nori,Charger,Pending,030853
+2168,Raagini Gulati,Earbuds,Rejected,219057
+2169,Shaurya Randhawa,Earbuds,Approved,079337
+2170,Aarna Murthy,Air Purifier,Pending,223394
+2171,Pushti Kant,Air Purifier,Rejected,765598
+2172,Bishakha Srinivas,CPU,Pending,407442
+2173,Hiral Wadhwa,Earbuds,Pending,104590
+2174,Falguni Dara,Charger,Approved,867044
+2175,Pushti Chaudhry,AC,Rejected,729533
+2176,Lavanya Sura,Drone,Pending,875522
+2177,Ryan Shankar,Earbuds,Pending,930593
+2178,Ikbal Master,Charger,Rejected,287409
+2179,Arunima Modi,Drone,Pending,334498
+2180,Tanish Sule,Air Purifier,Rejected,676279
+2181,Tanish Yadav,Camera,Rejected,747073
+2182,Indali Ganguly,Air Purifier,Rejected,566819
+2183,Tanveer Dave,Air Purifier,Rejected,364051
+2184,Neha Andra,Charger,Approved,540407
+2185,Rajeshri Bera,Earbuds,Approved,275547
+2186,Nitara Babu,CPU,Pending,430955
+2187,Jagat Sood,AC,Approved,977136
+2188,Yahvi Jaggi,Charger,Approved,166379
+2189,Aditya More,Earbuds,Rejected,437669
+2190,Nikita Bhandari,Air Purifier,Approved,848084
+2191,Tripti Sem,AC,Approved,004895
+2192,Vedhika Gill,AC,Approved,033584
+2193,Neel Rao,Drone,Pending,828340
+2194,Jasmit Madan,Camera,Rejected,009926
+2195,Libni Dara,Camera,Approved,264033
+2196,William Chopra,Charger,Approved,320412
+2197,Kashvi Venkatesh,AC,Pending,746742
+2198,Sachi Grewal,CPU,Pending,691156
+2199,Devansh Lalla,Drone,Pending,137009
+2200,Bhavika Chahal,Camera,Rejected,378188
+2201,Garima Suresh,Charger,Pending,722352
+2202,Wriddhish Thaker,Earbuds,Pending,515693
+2203,Ansh Balan,CPU,Rejected,305431
+2204,Onveer Vohra,Air Purifier,Rejected,814783
+2205,Mahika Dey,Air Purifier,Pending,678649
+2206,Hemangini Ray,Earbuds,Rejected,475462
+2207,Divya Mander,Charger,Rejected,046218
+2208,Ryan Oak,Drone,Approved,250662
+2209,Nandini Verma,Earbuds,Approved,312582
+2210,Yug Pau,CPU,Pending,042539
+2211,Ira Dugar,CPU,Rejected,938803
+2212,Harini Divan,Charger,Pending,196703
+2213,Yashodhara Ahluwalia,AC,Approved,137843
+2214,Bina Borde,AC,Rejected,531480
+2215,Triveni Date,Drone,Approved,602954
+2216,Rohan Shan,Drone,Rejected,780894
+2217,Patrick Solanki,Drone,Rejected,864541
+2218,Teerth Vohra,AC,Approved,051344
+2219,Madhav Thaman,CPU,Approved,071076
+2220,Guneet Yadav,CPU,Pending,355679
+2221,Sanaya Mandal,Charger,Approved,695919
+2222,Brinda Khurana,Camera,Rejected,958915
+2223,Bachittar Parmer,Drone,Approved,922526
+2224,Praneel Vohra,AC,Rejected,627582
+2225,Hamsini Hora,Earbuds,Rejected,257601
+2226,Bishakha Sawhney,Air Purifier,Pending,096168
+2227,Geetika Grover,Earbuds,Approved,238519
+2228,David Murty,Earbuds,Rejected,503926
+2229,Vihaan Garg,Charger,Pending,612748
+2230,Indira Choudhary,CPU,Approved,127428
+2231,Abhimanyu Bail,Camera,Rejected,261307
+2232,Vaishnavi Badal,Charger,Pending,226292
+2233,Ojas Tak,CPU,Pending,441374
+2234,Charita Bhakta,Camera,Rejected,564562
+2235,Oscar Bhattacharyya,Drone,Rejected,214571
+2236,Gautami Vasa,CPU,Rejected,369882
+2237,Rushil Kala,Camera,Rejected,423486
+2238,Rachana Dash,CPU,Rejected,780420
+2239,Agastya Dewan,Charger,Rejected,061627
+2240,Watika Kadakia,Charger,Rejected,692758
+2241,Mahika Prabhakar,Air Purifier,Rejected,621078
+2242,Forum Chakraborty,Air Purifier,Rejected,591547
+2243,Upadhriti Nadig,Camera,Approved,658172
+2244,Wriddhish Patla,Camera,Pending,647364
+2245,Devansh Naik,Drone,Rejected,027653
+2246,Isha Bajaj,Charger,Approved,276684
+2247,Isaiah Hora,Drone,Approved,773376
+2248,Niharika Kannan,Earbuds,Rejected,075368
+2249,Qadim Dutta,Earbuds,Approved,053681
+2250,Ishwar De,AC,Approved,547683
+2251,Quincy Kar,Drone,Rejected,605252
+2252,Utkarsh Kalla,Camera,Rejected,246030
+2253,Nathaniel Parikh,CPU,Rejected,489691
+2254,Oviya Choudhury,Charger,Approved,178836
+2255,Balveer Kanda,Earbuds,Approved,739991
+2256,Tejas Murthy,Camera,Approved,233827
+2257,Lajita Balay,Earbuds,Pending,770795
+2258,Nilima Deep,Camera,Approved,980845
+2259,Aarav Ravel,Camera,Approved,657994
+2260,Tamanna Soman,Earbuds,Approved,137189
+2261,Hamsini Amble,Drone,Pending,866002
+2262,Tejas Mittal,Charger,Rejected,008908
+2263,Liam Ahuja,AC,Rejected,102522
+2264,Triveni Rajan,Charger,Rejected,961318
+2265,Mason Palla,Camera,Approved,329271
+2266,Abeer Dube,Drone,Pending,103812
+2267,Edhitha Singh,Charger,Pending,660807
+2268,Maanav Dhar,Earbuds,Pending,973958
+2269,Barkha Saran,Drone,Rejected,613790
+2270,Advaith Hari,CPU,Approved,770683
+2271,Jai Gara,CPU,Rejected,621900
+2272,Teerth Oommen,Camera,Rejected,105720
+2273,Kashvi Vohra,Air Purifier,Rejected,190572
+2274,Dayita Pandya,CPU,Rejected,881129
+2275,Nachiket Sharma,Camera,Rejected,960040
+2276,Anay Cheema,Drone,Approved,747788
+2277,Inaya Purohit,CPU,Approved,822113
+2278,Vyanjana Deol,Charger,Rejected,451241
+2279,Indrajit Naik,AC,Approved,326914
+2280,Luke Pradhan,Drone,Rejected,515804
+2281,Ekapad Nair,Drone,Pending,676130
+2282,Veer Mody,Air Purifier,Approved,781339
+2283,Liam Narain,Drone,Rejected,505856
+2284,Aachal Ranganathan,Drone,Approved,597102
+2285,Viraj Das,Camera,Rejected,580257
+2286,Yahvi Chandran,AC,Rejected,585506
+2287,Nilima Lad,Camera,Pending,407624
+2288,Wahab Manda,Drone,Pending,597599
+2289,Nachiket Gulati,Air Purifier,Pending,300236
+2290,Anmol Vohra,CPU,Rejected,783232
+2291,Zayan Bandi,Camera,Pending,378687
+2292,Michael Kadakia,Charger,Approved,532296
+2293,Dalbir Ray,Charger,Approved,967576
+2294,Hitesh Tailor,Air Purifier,Rejected,667250
+2295,Ranveer Viswanathan,Charger,Approved,161896
+2296,Alexander Kaul,CPU,Rejected,430434
+2297,Waida Naik,Earbuds,Approved,600589
+2298,Jatin Saha,Earbuds,Rejected,477287
+2299,Devansh Sani,Earbuds,Rejected,204855
+2300,Kashish Desai,Camera,Approved,080718
+2301,Ganga Bhakta,Earbuds,Approved,529358
+2302,Ishita Sethi,Charger,Approved,893207
+2303,Yashasvi Soman,Air Purifier,Rejected,409752
+2304,Sanaya Devi,Air Purifier,Approved,167399
+2305,Charles Badal,Charger,Rejected,425600
+2306,Zaitra De,Charger,Approved,843449
+2307,Bhavani Mishra,Air Purifier,Pending,566663
+2308,Anika Chaudhry,Earbuds,Approved,822992
+2309,Manya Lad,Drone,Pending,051353
+2310,Kabir Ram,Camera,Approved,497368
+2311,Matthew Bahri,Charger,Approved,578141
+2312,Isaac Bhattacharyya,Air Purifier,Pending,717389
+2313,Reva Loyal,Charger,Rejected,556806
+2314,Advika Dora,AC,Approved,977881
+2315,Viraj Sant,Drone,Approved,267480
+2316,Harish Nazareth,Charger,Approved,971073
+2317,Gaurav Sem,Drone,Rejected,612872
+2318,Ethan Lala,AC,Pending,637910
+2319,Chasmum Ratta,AC,Approved,029587
+2320,Umang Keer,Charger,Approved,251776
+2321,Chaaya Nair,Camera,Rejected,820047
+2322,Chandani Kale,Drone,Approved,684454
+2323,Chandran Varkey,Charger,Rejected,376724
+2324,Nisha De,Earbuds,Rejected,022948
+2325,Pahal Iyengar,Drone,Rejected,674886
+2326,Frederick Bath,Drone,Rejected,313571
+2327,Chanakya Pingle,Earbuds,Approved,420387
+2328,Tamanna Seshadri,Air Purifier,Rejected,840016
+2329,Urvi Narula,Drone,Approved,904024
+2330,Vasudha Balan,Air Purifier,Rejected,243092
+2331,Yashodhara Kothari,Earbuds,Approved,772477
+2332,Zayan Johal,Drone,Approved,460244
+2333,Gautam Mishra,CPU,Rejected,297337
+2334,Oliver Bansal,Air Purifier,Approved,951896
+2335,Nathaniel Bhatia,Earbuds,Rejected,101162
+2336,Yashica Rai,AC,Approved,045128
+2337,Vrinda Chaudhary,CPU,Rejected,955893
+2338,Ishani Rege,Air Purifier,Rejected,661629
+2339,Vrinda Halder,Drone,Rejected,925960
+2340,Turvi Ahuja,AC,Rejected,751059
+2341,Orinder Kaul,Camera,Rejected,189888
+2342,Hemang Khurana,Drone,Pending,919487
+2343,Yashvi Khatri,Camera,Rejected,431943
+2344,Varenya Desai,AC,Approved,565170
+2345,Dayamai Brahmbhatt,Air Purifier,Approved,363392
+2346,Janaki Mukhopadhyay,Air Purifier,Rejected,425630
+2347,Onkar Setty,Air Purifier,Approved,958681
+2348,Pavani Din,Earbuds,Approved,751535
+2349,Victor Rama,CPU,Rejected,709119
+2350,Gaurav Subramanian,Drone,Rejected,156555
+2351,Ekaraj Narula,Drone,Rejected,379516
+2352,Ikshita Srinivas,Air Purifier,Approved,843343
+2353,Aashi Thaman,Earbuds,Rejected,613827
+2354,Osha Keer,Earbuds,Approved,068539
+2355,Krishna Dash,Earbuds,Rejected,783198
+2356,Inaya Chauhan,AC,Rejected,747257
+2357,Jeremiah Manda,Earbuds,Rejected,674853
+2358,Zaitra Taneja,Earbuds,Rejected,789557
+2359,Michael Salvi,Air Purifier,Rejected,610240
+2360,Nandini Kothari,Air Purifier,Rejected,759546
+2361,Hemang Tripathi,Camera,Approved,839716
+2362,Chaitanya Sarin,Drone,Approved,775772
+2363,Forum Pandey,Drone,Approved,354729
+2364,Mekhala Vora,Charger,Rejected,206220
+2365,Rayaan Sunder,Air Purifier,Rejected,431122
+2366,Mugdha Ratta,Earbuds,Approved,287521
+2367,Prisha Master,Air Purifier,Rejected,305092
+2368,Bimala Bajaj,Earbuds,Pending,621013
+2369,Amrita Murthy,Air Purifier,Approved,800741
+2370,Kamya Sankaran,Air Purifier,Rejected,057375
+2371,Yochana Din,Drone,Rejected,328267
+2372,Nandini Kara,Charger,Rejected,034471
+2373,Gaurangi Sehgal,AC,Rejected,296593
+2374,Lopa Sule,Earbuds,Rejected,603204
+2375,Frederick Shah,Charger,Pending,815795
+2376,Gopal Shukla,CPU,Rejected,430926
+2377,Amruta Karnik,AC,Rejected,241050
+2378,Charles Roy,Drone,Rejected,965913
+2379,Sai Karnik,Camera,Pending,537154
+2380,Isha Grover,Camera,Approved,776424
+2381,Riya Gopal,Air Purifier,Approved,554320
+2382,Anmol Nagarajan,Camera,Rejected,454935
+2383,Diya Chander,Charger,Rejected,995898
+2384,Upadhriti Bath,Earbuds,Approved,749528
+2385,Azad Kakar,Air Purifier,Approved,750011
+2386,Aashi Sami,Air Purifier,Approved,115257
+2387,Rudra Prashad,Air Purifier,Approved,054267
+2388,Ekapad Gandhi,Charger,Approved,228248
+2389,Laksh Rege,Drone,Rejected,030655
+2390,Nimrat Chaudhuri,Camera,Rejected,200257
+2391,Jhalak Bail,Drone,Approved,133474
+2392,Anjali Batta,AC,Pending,180203
+2393,Maanas Sane,CPU,Approved,052342
+2394,Jackson Handa,Charger,Rejected,120409
+2395,Yasti Ranganathan,Air Purifier,Approved,814401
+2396,Yochana Chadha,Drone,Approved,722864
+2397,Umang De,Earbuds,Approved,583508
+2398,Shravya Kurian,Earbuds,Rejected,392464
+2399,Manya Prasad,Charger,Rejected,230442
+2400,Eshana Pingle,AC,Pending,308103
+2401,Praneel Nanda,AC,Approved,593951
+2402,Hema Bala,Charger,Approved,188647
+2403,Ati Palan,CPU,Approved,720791
+2404,Urmi Oza,Charger,Rejected,029012
+2405,Teerth Mangal,Earbuds,Rejected,789521
+2406,Laksh Lala,Charger,Rejected,992198
+2407,Chaitanya Sarin,CPU,Approved,572795
+2408,Oscar Dhillon,Camera,Approved,402893
+2409,Quincy Ghose,Air Purifier,Rejected,151727
+2410,Leela Bhavsar,Air Purifier,Approved,458823
+2411,Aadhya Ganesh,AC,Rejected,883075
+2412,Jyoti Deol,Charger,Approved,543032
+2413,Charles Nagy,AC,Rejected,243508
+2414,Laban Dhawan,AC,Approved,415384
+2415,Varsha Madan,Camera,Approved,070792
+2416,Megha Manne,Earbuds,Rejected,464143
+2417,Ladli Krish,Air Purifier,Pending,873777
+2418,Varsha Patil,Air Purifier,Approved,488742
+2419,Anvi Narula,Camera,Rejected,943857
+2420,Balveer Hayer,Drone,Approved,941471
+2421,Indali Dave,Drone,Rejected,775737
+2422,Faras Ratta,Earbuds,Rejected,571096
+2423,Sanaya Chandra,Earbuds,Rejected,812486
+2424,Forum Murty,Air Purifier,Rejected,346089
+2425,Ishani Thaker,Charger,Approved,952952
+2426,Zinal Dyal,AC,Rejected,155919
+2427,Patrick Doctor,CPU,Pending,219421
+2428,Irya Lad,Air Purifier,Approved,013186
+2429,Urishilla Kashyap,Camera,Approved,782903
+2430,Charan Walla,Drone,Approved,449616
+2431,Brijesh Kapur,Camera,Approved,009576
+2432,Tanmayi Khalsa,Camera,Approved,569324
+2433,Yug Dube,Air Purifier,Pending,161136
+2434,Krishna Gola,AC,Approved,377253
+2435,Vedant Kumar,AC,Pending,587539
+2436,Isaiah Issac,CPU,Rejected,204719
+2437,Chanakya Kant,Camera,Rejected,689976
+2438,Ekani Khare,Camera,Approved,081828
+2439,Manbir Pandey,AC,Pending,666194
+2440,Manthan Dayal,CPU,Pending,736990
+2441,Vasatika Rama,CPU,Rejected,098420
+2442,Ekapad Raman,AC,Rejected,043793
+2443,Widisha Natt,Air Purifier,Pending,272375
+2444,Vinaya Chatterjee,Air Purifier,Approved,046534
+2445,Barkha Kari,AC,Pending,471182
+2446,Bhanumati Sachdeva,Charger,Rejected,396682
+2447,Logan Lad,AC,Rejected,713859
+2448,Gauri Tara,Air Purifier,Approved,884782
+2449,Bina Kala,CPU,Approved,136887
+2450,Ria Cheema,Earbuds,Approved,463883
+2451,Anjali Kaul,AC,Approved,132074
+2452,Avni Dani,Drone,Approved,266845
+2453,Bakhshi Sundaram,Charger,Approved,427899
+2454,Turvi Vyas,CPU,Approved,122842
+2455,Ranveer Sani,Air Purifier,Approved,011742
+2456,Zilmil Date,Air Purifier,Approved,230012
+2457,Lavanya Sahota,Charger,Rejected,631733
+2458,Harini Issac,CPU,Rejected,679551
+2459,Harita Golla,Earbuds,Approved,482548
+2460,Banjeet Master,Air Purifier,Approved,652844
+2461,Devansh Bhavsar,AC,Pending,190140
+2462,Avni Raj,Camera,Rejected,220537
+2463,Nisha Korpal,Camera,Rejected,181976
+2464,Turvi Contractor,AC,Approved,483008
+2465,Jonathan Bains,Air Purifier,Pending,768965
+2466,Omaja Gulati,CPU,Rejected,026900
+2467,Isaiah Bumb,Charger,Approved,999625
+2468,Upadhriti Gara,Air Purifier,Rejected,412797
+2469,Sneha Grewal,Camera,Approved,767022
+2470,Chatura Pingle,Drone,Rejected,461488
+2471,Janani Menon,Camera,Approved,484135
+2472,Urishilla Gandhi,Camera,Approved,700291
+2473,Abdul Golla,Camera,Pending,446509
+2474,Pranit Pillai,CPU,Approved,807036
+2475,Eshana Sethi,Charger,Approved,363020
+2476,Jeet Munshi,CPU,Pending,270037
+2477,Daksh Walia,Charger,Rejected,646885
+2478,Jeremiah Apte,Earbuds,Pending,882297
+2479,Jonathan Madan,Charger,Approved,971533
+2480,Ekaraj Muni,Charger,Rejected,475488
+2481,Farhan Gandhi,Charger,Approved,250897
+2482,Radhika Ramaswamy,Charger,Pending,645206
+2483,Hemang Bal,AC,Rejected,339674
+2484,Jeremiah Pingle,Charger,Approved,784084
+2485,Tristan Behl,Charger,Pending,508266
+2486,Falguni Chopra,Air Purifier,Pending,782616
+2487,Chanchal Ravel,Drone,Approved,994113
+2488,Tarak Mistry,AC,Approved,017068
+2489,Avni Sarraf,Earbuds,Approved,661014
+2490,Viraj Kade,AC,Rejected,161726
+2491,Zehaan Varkey,Air Purifier,Approved,371615
+2492,Chaman Chaudhuri,AC,Approved,064878
+2493,Tara Agarwal,Charger,Approved,364094
+2494,Hemang Seth,Earbuds,Rejected,184891
+2495,Jagrati Som,Charger,Rejected,675673
+2496,Wyatt Sarma,Air Purifier,Rejected,379216
+2497,Faqid Merchant,Earbuds,Approved,090814
+2498,Udyati Toor,Charger,Approved,300255
+2499,Nitesh Dash,CPU,Approved,985609
+2500,Anita Tata,Camera,Approved,868475
+2501,Riya Sandhu,Charger,Approved,487302
+2502,Anika Minhas,Air Purifier,Approved,869693
+2503,Samesh Bhardwaj,CPU,Rejected,033306
+2504,Watika Acharya,Camera,Approved,369638
+2505,Max Om,Drone,Rejected,407337
+2506,Hema Narula,Charger,Rejected,507511
+2507,Aarini Reddy,Camera,Approved,661648
+2508,Ladli Tandon,CPU,Rejected,555828
+2509,Ekaraj Swaminathan,Camera,Pending,453219
+2510,Gauri Bhattacharyya,Air Purifier,Approved,259791
+2511,Ekansh Ray,CPU,Approved,350460
+2512,Mitali Pandey,Charger,Approved,203818
+2513,Jason Nagar,AC,Rejected,773189
+2514,Frederick Swaminathan,CPU,Approved,448306
+2515,Omkaar Ravel,Charger,Rejected,445681
+2516,Unnati Chaudhuri,AC,Pending,496748
+2517,George Kamdar,CPU,Approved,467405
+2518,Niharika Mane,CPU,Rejected,808769
+2519,Champak Arora,Drone,Approved,163592
+2520,Daksha Mandal,CPU,Approved,251973
+2521,Saanvi Mitter,Charger,Pending,086982
+2522,Chakradhar Saini,Camera,Approved,150420
+2523,Harini Arora,Air Purifier,Rejected,219803
+2524,Urmi Bali,Drone,Approved,808211
+2525,Bimala Manne,Drone,Pending,290486
+2526,Qasim Pillai,Charger,Approved,798392
+2527,Ekani Mander,Camera,Approved,321796
+2528,Arunima Tiwari,CPU,Approved,665871
+2529,Baghyawati Saxena,Drone,Rejected,607872
+2530,Vedhika Varughese,Drone,Rejected,645633
+2531,Gautami Nagi,Earbuds,Rejected,571445
+2532,Ira Kant,Drone,Approved,552364
+2533,Nitesh Toor,Earbuds,Approved,524371
+2534,Balveer Comar,Charger,Pending,936052
+2535,Tristan Anand,Earbuds,Pending,375972
+2536,Yug Parmer,AC,Rejected,526664
+2537,Damyanti Seth,Air Purifier,Approved,798472
+2538,Urmi Bhatt,Earbuds,Approved,706681
+2539,Varenya Pant,CPU,Approved,224238
+2540,Anvi Sur,Camera,Approved,160997
+2541,Frado Khatri,Camera,Rejected,830410
+2542,Ganga Dora,AC,Approved,510025
+2543,Falguni Choudhary,CPU,Approved,092563
+2544,Max Zacharia,Camera,Rejected,657225
+2545,Damyanti Bansal,Camera,Approved,683059
+2546,Nihal Dara,Drone,Approved,513149
+2547,Nathan Dhingra,Charger,Rejected,106214
+2548,Kevin Bava,Camera,Approved,024816
+2549,Radha Mammen,Charger,Rejected,335124
+2550,Daksha Iyer,Drone,Approved,991856
+2551,Harsh Walla,Camera,Pending,179540
+2552,Ria Madan,CPU,Rejected,455025
+2553,George Pai,CPU,Approved,314913
+2554,Gaurav D’Alia,Camera,Rejected,735441
+2555,Aachal Randhawa,Drone,Approved,250720
+2556,Charan Mall,Earbuds,Rejected,767937
+2557,Vansha Buch,Drone,Pending,877284
+2558,Balendra Kunda,CPU,Approved,267260
+2559,Yatin Agarwal,Drone,Rejected,880080
+2560,Qabil Taneja,Air Purifier,Approved,355849
+2561,Ojasvi Parsa,CPU,Pending,762730
+2562,Ryan Gala,Air Purifier,Pending,103885
+2563,Diya Goel,CPU,Rejected,498251
+2564,Samuel Sharma,CPU,Approved,316552
+2565,Farhan Parikh,AC,Pending,983204
+2566,Jagvi Chandran,Charger,Approved,703905
+2567,Eiravati Bandi,Charger,Pending,850832
+2568,Nathan Gandhi,Charger,Approved,372413
+2569,Kai Ganesan,AC,Approved,670860
+2570,Yamini Mohan,Drone,Pending,710435
+2571,Vivaan Menon,Air Purifier,Rejected,184306
+2572,Jai Sahota,Camera,Rejected,390738
+2573,Ryan Venkatesh,Earbuds,Rejected,748313
+2574,Udarsh Reddy,Air Purifier,Rejected,291796
+2575,Sara Bhagat,AC,Approved,221860
+2576,Ekapad Garde,Charger,Rejected,237258
+2577,Chanchal Sarna,Earbuds,Approved,322503
+2578,Chandani Borra,AC,Approved,509918
+2579,Vinaya Sidhu,AC,Pending,644716
+2580,Dalbir Chaudry,AC,Approved,218179
+2581,Yashasvi Sharaf,CPU,Rejected,133397
+2582,Aadi De,Charger,Approved,558253
+2583,Eshana Raman,Drone,Rejected,895314
+2584,Gautami Subramanian,Air Purifier,Rejected,840538
+2585,Darsh Ramakrishnan,Drone,Approved,303368
+2586,Jeet Joshi,AC,Approved,358459
+2587,Bimala Kohli,Charger,Approved,085074
+2588,Janani Dugal,Charger,Rejected,706618
+2589,Vedika Chada,Earbuds,Pending,711791
+2590,Vaishnavi Toor,Camera,Rejected,860693
+2591,Yahvi Lanka,Drone,Pending,117255
+2592,Vansha Lanka,CPU,Approved,170021
+2593,Neel Bhat,Earbuds,Approved,952675
+2594,Eta Dayal,CPU,Rejected,982060
+2595,Onveer Vig,AC,Rejected,775409
+2596,Janaki Iyengar,Drone,Approved,852239
+2597,Ekbal Kunda,Camera,Pending,609905
+2598,Theodore Baria,CPU,Rejected,057134
+2599,Bachittar Basak,CPU,Rejected,034392
+2600,Anay Kannan,Drone,Rejected,037145
+2601,Kalpit Sachdev,CPU,Approved,871450
+2602,Tanveer Chaudhry,AC,Rejected,986709
+2603,Tarak Kar,Air Purifier,Pending,306750
+2604,Wridesh Butala,Charger,Rejected,325932
+2605,Falan Ram,Air Purifier,Approved,735156
+2606,Nathaniel Tandon,Air Purifier,Rejected,993450
+2607,Harsh Chopra,Air Purifier,Rejected,104716
+2608,Gauri Sandhu,CPU,Approved,387933
+2609,Eesha Sankaran,Drone,Pending,293960
+2610,Mitesh Rege,Earbuds,Approved,949097
+2611,Hemang Kaul,CPU,Approved,749983
+2612,Patrick Ghosh,AC,Rejected,581290
+2613,Gauri Kumar,Air Purifier,Approved,136333
+2614,Gabriel Parsa,Air Purifier,Approved,916869
+2615,Shivani Tak,Camera,Rejected,998508
+2616,Noah Chhabra,Air Purifier,Approved,887546
+2617,Leena Garde,Air Purifier,Rejected,412009
+2618,Lajita Bhat,Drone,Approved,279401
+2619,Charita Ben,CPU,Rejected,293266
+2620,Zilmil Sodhi,Drone,Approved,653434
+2621,Chameli Prasad,Drone,Rejected,370690
+2622,Naksh Sankaran,Camera,Rejected,593369
+2623,Alka Walia,Camera,Rejected,629948
+2624,Diya Nadig,Air Purifier,Approved,007623
+2625,Ethan Ratta,Drone,Approved,881299
+2626,Wriddhish Dave,CPU,Pending,294469
+2627,Pahal Master,Charger,Rejected,335183
+2628,Thomas Butala,Air Purifier,Rejected,010742
+2629,Faraj Hans,Charger,Rejected,473888
+2630,Frado Raghavan,AC,Rejected,843326
+2631,Ayaan Gopal,Air Purifier,Approved,349750
+2632,Sneha Zacharia,Charger,Rejected,396218
+2633,Viraj Khatri,Drone,Approved,472875
+2634,Yuvraj Sankar,Earbuds,Approved,102743
+2635,Vihaan Hegde,Air Purifier,Approved,547029
+2636,Udyati Shenoy,Earbuds,Pending,185076
+2637,Mitali Bala,Camera,Rejected,793441
+2638,Girindra Garde,CPU,Approved,511219
+2639,Gavin Pradhan,Camera,Approved,733637
+2640,Oni Krish,Charger,Rejected,960157
+2641,Omya Mohan,Charger,Approved,504652
+2642,Hemani Deo,CPU,Pending,671589
+2643,Kai Yadav,Air Purifier,Approved,030074
+2644,Michael Chatterjee,Camera,Rejected,643855
+2645,Yashica Kala,Air Purifier,Approved,890889
+2646,Udarsh Devan,AC,Pending,034012
+2647,Yagnesh Chauhan,Drone,Rejected,945207
+2648,Mitesh Pingle,Earbuds,Rejected,032748
+2649,Thomas Borde,Camera,Rejected,849964
+2650,Udant Din,Air Purifier,Approved,245316
+2651,Ayush Saran,CPU,Rejected,566863
+2652,Kritika Pall,CPU,Rejected,715878
+2653,Chasmum Dugal,Air Purifier,Rejected,159727
+2654,Anirudh Varty,AC,Pending,222971
+2655,Qabil Subramaniam,CPU,Rejected,989105
+2656,Owen Dalal,Camera,Rejected,061681
+2657,Madhavi Sama,AC,Approved,811179
+2658,Amrita Narayanan,Camera,Rejected,825300
+2659,Tarak Nath,Camera,Rejected,886944
+2660,Udarsh Iyengar,Drone,Rejected,818409
+2661,Balhaar Tripathi,Camera,Approved,371191
+2662,Thomas Shanker,Earbuds,Rejected,632212
+2663,Harinakshi Gopal,AC,Rejected,127805
+2664,Ishita Bumb,Charger,Rejected,809062
+2665,Hamsini Kala,AC,Rejected,144418
+2666,Balhaar Sarkar,Drone,Approved,721454
+2667,Lakshmi Srinivasan,Drone,Approved,234237
+2668,Yutika Misra,Charger,Rejected,082346
+2669,Yauvani Sagar,Charger,Rejected,999616
+2670,Jalsa Raman,Air Purifier,Approved,897162
+2671,Robert Handa,Camera,Approved,211224
+2672,Tanvi Kala,Earbuds,Rejected,169634
+2673,Vansha Apte,Charger,Approved,744060
+2674,Yashodhara Chandra,Camera,Approved,283668
+2675,Anirudh Shenoy,Earbuds,Rejected,913220
+2676,Bishakha Sachdeva,Camera,Approved,933587
+2677,Aarna Narayan,Earbuds,Rejected,272459
+2678,Vihaan Kumar,Drone,Pending,751644
+2679,Logan Kale,Drone,Approved,674343
+2680,Frado Chakrabarti,Charger,Rejected,557277
+2681,Sudiksha Sibal,Drone,Approved,740459
+2682,Lohit Parmar,Drone,Approved,332504
+2683,Vasana Tiwari,Drone,Pending,487857
+2684,Tanay Ramaswamy,Charger,Approved,349212
+2685,Prisha Dada,AC,Approved,899012
+2686,Nakul Luthra,CPU,Approved,400835
+2687,Saumya Chada,Drone,Pending,875208
+2688,Aarav Bala,AC,Pending,285363
+2689,Veer Deshpande,Earbuds,Approved,566999
+2690,Yashodhara Karan,AC,Approved,961845
+2691,Omisha Gopal,Drone,Pending,984937
+2692,Abhimanyu Mand,Drone,Approved,517168
+2693,Rehaan Chaudhari,AC,Pending,896585
+2694,Girindra Bassi,Earbuds,Approved,192221
+2695,Maanav Sanghvi,Air Purifier,Approved,261854
+2696,Ojas Balakrishnan,Air Purifier,Rejected,317344
+2697,Agastya Jhaveri,Charger,Approved,866081
+2698,Charan Bhatia,Air Purifier,Approved,034170
+2699,Falan Chandra,CPU,Approved,462036
+2700,Gagan Guha,Air Purifier,Approved,656759
+2701,Ekalinga Sathe,Drone,Rejected,949477
+2702,Vaishnavi Randhawa,CPU,Approved,497692
+2703,Imaran Panchal,AC,Rejected,609807
+2704,Daksh Mand,Charger,Rejected,079594
+2705,Eshana Mital,Camera,Pending,574960
+2706,Xiti Peri,Charger,Pending,256438
+2707,Vedhika Samra,Camera,Rejected,660279
+2708,Orinder Mistry,Earbuds,Approved,207447
+2709,Caleb Badal,Earbuds,Pending,889487
+2710,Harshil Kakar,Camera,Approved,230765
+2711,Avi Krishnamurthy,AC,Pending,789013
+2712,Ronith Misra,Camera,Rejected,363374
+2713,Zayan Majumdar,CPU,Pending,516298
+2714,Yuvraj Doctor,Earbuds,Rejected,406353
+2715,Aachal Barad,Charger,Rejected,689803
+2716,Samesh Wadhwa,Earbuds,Pending,624480
+2717,Neha Gokhale,Air Purifier,Approved,477764
+2718,Hemang Maharaj,Charger,Pending,173872
+2719,Jasmit Patla,CPU,Pending,596696
+2720,Turvi Mani,AC,Rejected,784504
+2721,Falan Cheema,CPU,Pending,377523
+2722,Amruta Zacharia,CPU,Rejected,968611
+2723,Qabil Mangat,CPU,Approved,134505
+2724,Madhavi Parekh,Camera,Rejected,952759
+2725,Karan Kunda,AC,Approved,696695
+2726,Qadim Uppal,Air Purifier,Approved,735884
+2727,Farhan Agrawal,CPU,Rejected,416891
+2728,Patrick Butala,Camera,Rejected,698609
+2729,Rajeshri Lad,Air Purifier,Approved,215516
+2730,Jack Singhal,Earbuds,Rejected,376186
+2731,Ikbal Thaman,AC,Approved,888887
+2732,George Bhasin,Charger,Rejected,728613
+2733,Gunbir Tandon,Camera,Rejected,526358
+2734,Suhani Hora,Charger,Approved,308375
+2735,Amruta Krishnan,Charger,Approved,640996
+2736,Vritti Saxena,Drone,Rejected,398390
+2737,Adya Bassi,Air Purifier,Rejected,253107
+2738,Krisha Trivedi,AC,Rejected,221786
+2739,Bhavya De,CPU,Approved,615638
+2740,Vasatika Samra,Earbuds,Rejected,211015
+2741,Ayaan Jhaveri,AC,Approved,028506
+2742,Unnati Gaba,Air Purifier,Approved,368646
+2743,Dalaja Maharaj,Drone,Approved,368585
+2744,Divya Sule,Earbuds,Pending,547892
+2745,Unnati Bava,Camera,Approved,923702
+2746,Sai Mallick,Charger,Approved,481166
+2747,Nachiket Bose,Earbuds,Rejected,032824
+2748,Chatresh Raman,Charger,Approved,441289
+2749,Amara Mukhopadhyay,Drone,Approved,562609
+2750,Warda Chakrabarti,Earbuds,Rejected,107579
+2751,Vinaya Das,Drone,Rejected,186131
+2752,Vyanjana Sehgal,Camera,Approved,557497
+2753,Libni Deshmukh,Air Purifier,Rejected,172365
+2754,Dayamai Gill,CPU,Rejected,072268
+2755,Finn Deol,Charger,Approved,085189
+2756,Upma Mitra,Camera,Pending,257645
+2757,Wakeeta Pandey,Charger,Rejected,832805
+2758,Bimala Issac,Drone,Rejected,706817
+2759,Vasatika Gopal,AC,Approved,368978
+2760,Ayush Gill,Earbuds,Approved,244021
+2761,Imaran Deo,Camera,Rejected,826365
+2762,Sudiksha Bedi,Air Purifier,Rejected,485238
+2763,Zashil Agrawal,Camera,Rejected,895546
+2764,Yashawini Borra,AC,Approved,958903
+2765,Sai Sabharwal,CPU,Approved,626322
+2766,Samuel Mann,CPU,Approved,701942
+2767,Leena Kar,Drone,Rejected,289183
+2768,Ishani Chadha,Camera,Approved,185982
+2769,Jeet Ahluwalia,AC,Approved,076292
+2770,Anya Chakrabarti,Air Purifier,Approved,044213
+2771,Ishani Ram,Air Purifier,Rejected,278369
+2772,Devansh Kakar,Drone,Approved,445754
+2773,Sanya Korpal,Earbuds,Pending,040102
+2774,Darsh Jhaveri,Earbuds,Approved,458369
+2775,Faris Bala,CPU,Approved,584626
+2776,Kashish Rattan,AC,Approved,957825
+2777,Madhavi Dasgupta,Charger,Pending,671240
+2778,Udarsh Ghosh,CPU,Rejected,015343
+2779,Anirudh Choudhary,Drone,Rejected,273289
+2780,Champak Seshadri,Camera,Approved,541140
+2781,Gaurav Banerjee,AC,Rejected,028840
+2782,Azad Gaba,Charger,Approved,210482
+2783,Vrinda Gupta,CPU,Rejected,035259
+2784,Raksha Arora,Drone,Approved,526005
+2785,Elijah Gokhale,Earbuds,Rejected,995699
+2786,Vedant Dewan,Drone,Rejected,555230
+2787,Tamanna Mitra,Drone,Rejected,941022
+2788,Watika Chhabra,Earbuds,Pending,833668
+2789,Yagnesh Choudhury,Charger,Rejected,573664
+2790,Parth Pillay,CPU,Rejected,584083
+2791,Zilmil Dasgupta,Earbuds,Pending,262478
+2792,Lakshmi Vig,Drone,Rejected,789669
+2793,Ridhi Parekh,CPU,Rejected,279401
+2794,Avi Uppal,Air Purifier,Approved,613076
+2795,Deepa Chopra,Drone,Rejected,980289
+2796,Chaman Bose,AC,Rejected,421284
+2797,Tanish Sani,CPU,Approved,159741
+2798,Nathan Handa,Earbuds,Approved,884322
+2799,Rehaan Pall,Camera,Rejected,114157
+2800,Lajita Kuruvilla,Drone,Approved,278773
+2801,Maya Solanki,Earbuds,Approved,582813
+2802,Nitesh Deshmukh,Camera,Pending,514649
+2803,Aditya Virk,AC,Approved,112378
+2804,Shaurya Dixit,Camera,Approved,106957
+2805,Anjali Samra,CPU,Rejected,364900
+2806,Isaac Andra,Earbuds,Rejected,723680
+2807,Naksh Aggarwal,Camera,Rejected,328911
+2808,Inaya Divan,Charger,Rejected,927862
+2809,Harish Vyas,AC,Pending,548993
+2810,Dayamai Ghose,Earbuds,Rejected,569243
+2811,Jagdish Mannan,AC,Rejected,912609
+2812,Harrison Srinivasan,Drone,Approved,772769
+2813,Ladli Bhavsar,Drone,Pending,781780
+2814,Aarini Walla,Drone,Approved,287579
+2815,Gaurika Dhar,Drone,Rejected,555471
+2816,Adya Goyal,Charger,Rejected,303796
+2817,Bakhshi Gokhale,Earbuds,Rejected,213783
+2818,Bhavini Manda,Air Purifier,Approved,904349
+2819,Isha Dyal,AC,Pending,451504
+2820,Vasatika Chakrabarti,Earbuds,Rejected,831894
+2821,Hemani Bal,Camera,Approved,318864
+2822,Eesha Sandal,Drone,Pending,025049
+2823,Ekavir Mani,Earbuds,Rejected,603475
+2824,Hamsini Mani,CPU,Approved,960079
+2825,Hema Singhal,Earbuds,Rejected,189713
+2826,Advay Peri,CPU,Pending,385675
+2827,Yashodhara Baria,Charger,Pending,887524
+2828,Nitesh Keer,Charger,Rejected,498522
+2829,Chandran Sundaram,Air Purifier,Rejected,623114
+2830,Lopa Vohra,CPU,Pending,413972
+2831,Finn Tiwari,AC,Approved,667090
+2832,Oni Chand,Camera,Approved,353555
+2833,Balhaar Rajagopal,AC,Approved,408124
+2834,Gautami Dora,Camera,Rejected,983629
+2835,Hema Maharaj,Camera,Rejected,119847
+2836,Deepa Varma,Drone,Rejected,391514
+2837,Zehaan Dave,Camera,Rejected,916059
+2838,Robert Gopal,Air Purifier,Rejected,496285
+2839,Hema Khare,Drone,Approved,247438
+2840,Advaith Brar,Charger,Rejected,576934
+2841,Jeevika Wagle,Drone,Approved,873058
+2842,Siddharth Mall,Drone,Pending,468794
+2843,Yug Munshi,Drone,Approved,517818
+2844,Hiral Walia,Charger,Rejected,056208
+2845,Bakhshi Roy,Drone,Approved,434163
+2846,Yasti Kaur,CPU,Rejected,003329
+2847,Saanvi Bumb,CPU,Approved,344739
+2848,Gautami Kant,Charger,Approved,487228
+2849,Raghav Sandhu,Camera,Rejected,146691
+2850,Gaurav Patla,CPU,Rejected,850978
+2851,Sanaya Bala,Charger,Pending,103710
+2852,Azaan Vora,Earbuds,Approved,695486
+2853,Jagat Chad,Drone,Approved,065988
+2854,Chakradev Murthy,AC,Rejected,256681
+2855,Tamanna Pandit,AC,Rejected,486173
+2856,Bhavani Bakshi,Charger,Rejected,753530
+2857,Omya Bains,Air Purifier,Rejected,915453
+2858,Suhani Korpal,AC,Rejected,716025
+2859,Chasmum Chauhan,CPU,Pending,392901
+2860,Siddharth Luthra,CPU,Pending,834318
+2861,Vanya Parmar,AC,Approved,698407
+2862,Vyanjana Sabharwal,AC,Approved,520915
+2863,Yamini Doshi,AC,Rejected,381311
+2864,Krishna Ganesan,Air Purifier,Rejected,230386
+2865,Zayyan Datta,Earbuds,Approved,910905
+2866,Patrick Maharaj,Camera,Rejected,077424
+2867,Chandani Vig,Camera,Approved,540087
+2868,Vyanjana Ganesan,Charger,Approved,916252
+2869,Nitara Gole,Charger,Rejected,156873
+2870,Gaurav Mishra,CPU,Approved,917450
+2871,Wyatt Gara,AC,Rejected,603103
+2872,Urvi Dhar,AC,Approved,301864
+2873,Finn Chadha,Earbuds,Approved,796810
+2874,Tristan Iyengar,Air Purifier,Approved,063883
+2875,Ekbal Borah,Drone,Rejected,389217
+2876,Tanvi Dora,AC,Rejected,505002
+2877,Sarthak Sharma,Drone,Approved,124473
+2878,Rishi Swamy,Earbuds,Rejected,748036
+2879,Ekanta Chaudhuri,AC,Approved,579514
+2880,Udyati Borra,Air Purifier,Approved,379348
+2881,Nirja Sekhon,Air Purifier,Rejected,780190
+2882,Lila Krishnan,Air Purifier,Pending,281187
+2883,Unni Mander,Drone,Rejected,271596
+2884,Vrinda Sem,Drone,Approved,039909
+2885,Krishna Dey,AC,Rejected,201618
+2886,Bimala Varughese,Earbuds,Pending,309667
+2887,Falan Bhandari,Camera,Approved,888128
+2888,Shaurya Zacharia,Charger,Approved,298946
+2889,Priya Maharaj,Camera,Rejected,208405
+2890,Samar Goyal,AC,Approved,163791
+2891,Nidhi Peri,Drone,Approved,293547
+2892,Neha Balasubramanian,Drone,Approved,193195
+2893,Abhiram Singhal,Charger,Rejected,129927
+2894,Sanaya Dayal,CPU,Approved,823089
+2895,Nachiket Viswanathan,Charger,Approved,545184
+2896,Harita Srinivasan,Earbuds,Approved,205304
+2897,Tarak Pillai,CPU,Rejected,744408
+2898,Henry Seth,Air Purifier,Approved,651354
+2899,Pavani Jayaraman,Air Purifier,Pending,104933
+2900,Anvi Nath,Drone,Approved,404232
+2901,Yochana Amble,AC,Approved,177076
+2902,Elijah Narayan,CPU,Approved,678293
+2903,Yashvi Mander,AC,Approved,096857
+2904,Hiral Chaudhary,Drone,Rejected,012052
+2905,Kashvi Swaminathan,Drone,Rejected,093107
+2906,Quincy Venkatesh,Earbuds,Approved,602165
+2907,Yuvraj Grewal,Drone,Approved,867940
+2908,Abdul Mandal,CPU,Approved,479146
+2909,Manthan Gade,Earbuds,Rejected,554921
+2910,Oscar Setty,Charger,Approved,868665
+2911,Jagrati Dube,Camera,Pending,418807
+2912,Mason Gulati,Air Purifier,Approved,298899
+2913,Rudra Sarin,Earbuds,Approved,680842
+2914,Rayaan Pradhan,Charger,Rejected,483859
+2915,Mekhala Chaudhuri,Camera,Rejected,473016
+2916,Oliver Hora,Air Purifier,Pending,958607
+2917,Daksh De,Air Purifier,Approved,954376
+2918,Shravya Badal,Drone,Rejected,472055
+2919,Ekavir Dube,AC,Pending,828881
+2920,Ishwar Shetty,Charger,Approved,381507
+2921,Aashi Sarna,AC,Rejected,804365
+2922,Isaac Andra,CPU,Rejected,681658
+2923,Mugdha Sawhney,Earbuds,Rejected,231251
+2924,Pranav Luthra,Air Purifier,Approved,344848
+2925,Abhiram Maharaj,CPU,Pending,507702
+2926,Peter Oza,AC,Approved,652980
+2927,Leena Kar,Drone,Approved,581342
+2928,Ekansh Iyer,Camera,Pending,224752
+2929,Hardik Handa,Camera,Approved,271030
+2930,Waida Deol,Camera,Rejected,783987
+2931,Jacob Ahuja,Air Purifier,Approved,273833
+2932,Gauri Dubey,Charger,Rejected,263682
+2933,Bhavani Tiwari,CPU,Rejected,758661
+2934,Madhav Kala,Earbuds,Rejected,911451
+2935,Alka Nori,Air Purifier,Rejected,344856
+2936,Xalak Nagy,AC,Pending,295349
+2937,Jasmit Pai,AC,Rejected,399547
+2938,Adweta Issac,AC,Approved,552525
+2939,Samesh Mann,Camera,Approved,811561
+2940,Vasudha Sabharwal,Camera,Approved,746220
+2941,Oviya Mander,AC,Pending,379647
+2942,Qarin Sampath,Camera,Rejected,582091
