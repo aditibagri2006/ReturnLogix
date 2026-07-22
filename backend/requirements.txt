@@ -1,0 +1,10 @@
+Flask
+Flask-Cors
+pandas
+numpy
+scikit-learn
+joblib
+SQLAlchemy
+psycopg2-binary
+Faker
+openpyxl
