@@ -1,7 +1,6 @@
+import os
 import psycopg2
-conn = psycopg2.connect(host="localhost",
-                        database="internshipdb",
-                        user="postgres",
-                        password="Dhanush@2019"
-                        )
 
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+conn = psycopg2.connect(DATABASE_URL)

@@ -1,16 +1,14 @@
 from faker import Faker
 import random
+import os
 import psycopg2
 from datetime import timedelta
 
 fake = Faker("en_IN")
 
-conn = psycopg2.connect(
-    host="localhost",
-    database="internshipdb",
-    user="postgres",
-    password="Dhanush@2019"
-)
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+conn = psycopg2.connect(DATABASE_URL)
 
 cur = conn.cursor()
 

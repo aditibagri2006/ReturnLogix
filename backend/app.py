@@ -6,6 +6,7 @@ from db import conn
 import csv
 from flask import send_file
 from predict import predict_return_status
+import os
 
 app = Flask(__name__)
 
@@ -940,4 +941,4 @@ def export_excel():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run( host="0.0.0.0", port=int(os.environ.get("PORT", 5000)),debug=False)

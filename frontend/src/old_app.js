@@ -128,6 +128,7 @@ function App() {
         placeholder="Enter Email"
         value={uemail}
         onChange={(e) => setUemail(e.target.value)}
+        required
       />
 
       <br /><br />

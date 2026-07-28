@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from sqlalchemy import create_engine
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -7,9 +8,9 @@ import joblib
 
 
 
-engine = create_engine(
-    "postgresql://postgres:Dhanush%402019@localhost/internshipdb"
-)
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+engine = create_engine(DATABASE_URL)
 
 query = """
 SELECT

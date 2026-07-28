@@ -80,7 +80,7 @@ function ReturnForm() {
         }
 
         // Email
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerEmail)) {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerEmail.trim())) {
             setMessage("Enter valid Email address");
             setMessageType("error");
             return;
@@ -183,6 +183,7 @@ function ReturnForm() {
                             placeholder="Customer Name"
                             value={customerName}
                             onChange={(e) => setCustomerName(e.target.value)}
+                            required
                         />
 
                         <input
