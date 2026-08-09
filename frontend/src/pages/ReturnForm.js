@@ -21,7 +21,7 @@ function ReturnForm() {
     const [reverseLogisticsCost, setReverseLogisticsCost] = useState("");
     const [pickupPincode, setPickupPincode] = useState("");
     const [message, setMessage] = useState("");
-    const [messageType, setMessageType] = useState("");
+    const [setMessageType] = useState("");
     const predictReturnStatus = async () => {
         if (
             !productCategory ||
