@@ -1,8 +1,13 @@
 import joblib
 import pandas as pd
+import os
 
-model = joblib.load("return_status_model.pkl")
-model_features = joblib.load("model_features.pkl")
+# Use absolute paths based on the location of this file so the models
+# load correctly regardless of which directory the server is started from
+# (important for Render/Railway deployments where the CWD may differ).
+_DIR = os.path.dirname(os.path.abspath(__file__))
+model = joblib.load(os.path.join(_DIR, "return_status_model.pkl"))
+model_features = joblib.load(os.path.join(_DIR, "model_features.pkl"))
 
 
 def predict_return_status(

@@ -1,11 +1,20 @@
-import psycopg2
+import io
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import re
-from db import conn
+from db import get_conn
 import csv
 from predict import predict_return_status
 import os
+
+# Load .env for local development (no-op if python-dotenv is absent or
+# there is no .env file — perfectly safe to keep in production too).
+try:
+    # pyrefly: ignore [missing-import]
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 app = Flask(__name__)
 
@@ -33,6 +42,7 @@ def handle_preflight():
 
 @app.route('/user/signup', methods=['POST'])
 def signup():
+    conn = get_conn()
     cur = conn.cursor()
     data = request.json or {}
 
@@ -77,6 +87,7 @@ def signup_alias():
 
 @app.route('/user/signin', methods=['POST'])
 def signin():
+    conn = get_conn()
     cur = conn.cursor()
     data = request.json or {}
 
@@ -110,6 +121,7 @@ def signin_alias():
 
 @app.route('/users', methods=['GET'])
 def get_users():
+    conn = get_conn()
     cur = conn.cursor()
     cur.execute("SELECT uid, uname, uemail, created_at FROM users")
     data = cur.fetchall()
@@ -121,6 +133,7 @@ def get_users():
 
 @app.route('/update-product-details/<int:id>', methods=['PUT'])
 def update_product_details(id):
+    conn = get_conn()
     cur = conn.cursor()
 
     description = request.form.get('description')
@@ -142,6 +155,7 @@ def update_product_details(id):
 
 @app.route('/product/<int:id>', methods=['GET'])
 def get_product(id):
+    conn = get_conn()
     cur = conn.cursor()
 
     cur.execute("""
@@ -171,6 +185,7 @@ def get_product(id):
 
 @app.route('/export-csv', methods=['GET'])
 def export_csv():
+    conn = get_conn()
     cur = conn.cursor()
 
     cur.execute("""
@@ -185,27 +200,32 @@ def export_csv():
     """)
 
     data = cur.fetchall()
-    filename = "returns_export.csv"
 
-    with open(filename, "w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow([
-            "Return ID",
-            "Customer Name",
-            "Product Name",
-            "Status",
-            "Pincode"
-        ])
-        writer.writerows(data)
+    # Write to an in-memory buffer instead of disk — required on read-only
+    # hosted environments (Render, Railway, etc.).
+    output = io.StringIO()
+    writer = csv.writer(output)
+    writer.writerow([
+        "Return ID",
+        "Customer Name",
+        "Product Name",
+        "Status",
+        "Pincode"
+    ])
+    writer.writerows(data)
+    output.seek(0)
 
     return send_file(
-        filename,
-        as_attachment=True
+        io.BytesIO(output.getvalue().encode("utf-8")),
+        mimetype="text/csv",
+        as_attachment=True,
+        download_name="returns_export.csv"
     )
 
 
 @app.route('/update-return', methods=['PUT'])
 def update_return():
+    conn = get_conn()
     cur = conn.cursor()
     data = request.json or {}
 
@@ -232,6 +252,7 @@ def update_return():
 
 @app.route('/delete-return/<int:return_id>', methods=['DELETE'])
 def delete_return(return_id):
+    conn = get_conn()
     cur = conn.cursor()
     cur.execute(
         "DELETE FROM returns WHERE return_request_id = %s",
@@ -247,6 +268,7 @@ def delete_return(return_id):
 
 @app.route('/user', methods=['POST'])
 def submit():
+    conn = get_conn()
     cur = conn.cursor()
     data = request.json or {}
 
@@ -364,6 +386,7 @@ def customer_submit_return():
             carrier_name=data['carrier_name']
         )
 
+        conn = get_conn()
         cur = conn.cursor()
         cur.execute("""
             INSERT INTO returns (
@@ -393,7 +416,10 @@ def customer_submit_return():
         }), 201
 
     except Exception as e:
-        conn.rollback()
+        try:
+            get_conn().rollback()
+        except Exception:
+            pass
         return jsonify({
             "message": "Could not submit return request",
             "error": str(e)
@@ -403,6 +429,7 @@ def customer_submit_return():
 @app.route('/customer/returns/<email>', methods=['GET'])
 def customer_returns(email):
     try:
+        conn = get_conn()
         cur = conn.cursor()
         cur.execute("""
             SELECT
@@ -429,6 +456,7 @@ def customer_returns(email):
 
 @app.route('/dashboard', methods=['GET'])
 def dashboard():
+    conn = get_conn()
     cur = conn.cursor()
     cur.execute("SELECT COUNT(*) FROM returns")
     row = cur.fetchone()
@@ -456,6 +484,7 @@ def dashboard():
 
 @app.route('/read/<int:page>', methods=['GET'])
 def read(page):
+    conn = get_conn()
     cur = conn.cursor()
     limit = 10
     offset = (page - 1) * limit
@@ -484,6 +513,7 @@ def read(page):
 
 @app.route('/update', methods=['PUT'])
 def update():
+    conn = get_conn()
     cur = conn.cursor()
     data = request.json or {}
 
@@ -504,6 +534,7 @@ def update():
 
 @app.route('/delete/<regid>', methods=['DELETE'])
 def delete(regid):
+    conn = get_conn()
     cur = conn.cursor()
     cur.execute(
         "DELETE FROM submissions WHERE regid=%s",
@@ -610,6 +641,7 @@ def _enrich_with_ai(row):
 @app.route('/employee/dashboard-metrics', methods=['GET'])
 def employee_dashboard_metrics():
     try:
+        conn = get_conn()
         cur = conn.cursor()
         cur.execute(f"""
             SELECT
@@ -642,6 +674,7 @@ def employee_dashboard_metrics():
 @app.route('/employee/analytics', methods=['GET'])
 def employee_analytics():
     try:
+        conn = get_conn()
         cur = conn.cursor()
 
         def distribution(column):
@@ -711,6 +744,7 @@ def employee_analytics():
 @app.route('/employee/returns', methods=['GET'])
 def employee_returns():
     try:
+        conn = get_conn()
         page = max(1, int(request.args.get('page', 1)))
         limit = max(1, min(100, int(request.args.get('limit', 10))))
         search = request.args.get('search', '').strip()
@@ -804,6 +838,7 @@ def employee_returns():
 @app.route('/employee/returns/<int:return_id>', methods=['GET'])
 def employee_return_detail(return_id):
     try:
+        conn = get_conn()
         cur = conn.cursor()
         select_cols = ", ".join(EMPLOYEE_RETURN_DETAIL_COLUMNS)
         cur.execute(f"""
@@ -839,6 +874,7 @@ def employee_return_detail(return_id):
 @app.route('/employee/returns/<int:return_id>', methods=['PUT'])
 def employee_update_return(return_id):
     try:
+        conn = get_conn()
         data = request.json or {}
         updates = []
         params = []
@@ -879,7 +915,10 @@ def employee_update_return(return_id):
         return jsonify({"message": "Return updated successfully"})
 
     except Exception as e:
-        conn.rollback()
+        try:
+            get_conn().rollback()
+        except Exception:
+            pass
         return jsonify({"message": "Could not update return", "error": str(e)}), 400
 
 
@@ -893,6 +932,7 @@ def export_excel():
         }), 500
 
     try:
+        conn = get_conn()
         cur = conn.cursor()
         cur.execute("""
             SELECT return_request_id, customer_name, customer_email, product_name,
@@ -911,15 +951,23 @@ def export_excel():
         ]
         df = pd.DataFrame(rows, columns=columns)
 
-        filename = "returns_export.xlsx"
+        # Write to an in-memory buffer instead of disk — required on
+        # read-only hosted environments (Render, Railway, etc.).
+        output = io.BytesIO()
         try:
-            df.to_excel(filename, index=False, engine="openpyxl")
+            df.to_excel(output, index=False, engine="openpyxl")
         except ImportError:
             return jsonify({
                 "message": "Excel export requires the 'openpyxl' package."
             }), 500
+        output.seek(0)
 
-        return send_file(filename, as_attachment=True)
+        return send_file(
+            output,
+            mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            as_attachment=True,
+            download_name="returns_export.xlsx"
+        )
     except Exception as e:
         return jsonify({"message": "Could not export Excel file", "error": str(e)}), 400
 

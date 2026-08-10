@@ -269,13 +269,13 @@ for i in range(500):
         return_reason = random.choice(reasons)
         # Review Status Business Rule
         if return_status == "Approved":
-            review_status = "Approved"
+            selected_review_status = "Approved"
 
         elif return_status == "Rejected":
-            review_status = "Rejected"
+            selected_review_status = "Rejected"
 
         else:
-            review_status = random.choice([
+            selected_review_status = random.choice([
                 "Under Review",
                 "Escalated"
             ])
@@ -334,7 +334,7 @@ for i in range(500):
             resolution_days,
 
             reviewed_by,
-            review_status,
+            selected_review_status,
 
             pickup_date,
             warehouse_location,

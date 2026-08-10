@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_BASE } from "../api";
 function ReturnForm() {
     const [prediction, setPrediction] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -21,7 +22,6 @@ function ReturnForm() {
     const [reverseLogisticsCost, setReverseLogisticsCost] = useState("");
     const [pickupPincode, setPickupPincode] = useState("");
     const [message, setMessage] = useState("");
-    const [setMessageType] = useState("");
     const predictReturnStatus = async () => {
         if (
             !productCategory ||
@@ -40,7 +40,7 @@ function ReturnForm() {
 
         try {
             const response = await fetch(
-            "http://127.0.0.1:5000/predict-return-status",
+            `${API_BASE}/predict-return-status`,
             {
                 method: "POST",
                 headers: {
@@ -134,7 +134,7 @@ function ReturnForm() {
             setMessageType("error");
             return;
         }
-        const response = await fetch("http://127.0.0.1:5000/user", {
+        const response = await fetch(`${API_BASE}/user`, {
 
         method: "POST",
 
