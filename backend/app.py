@@ -1,20 +1,35 @@
 import psycopg2
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import re
 from db import conn
 import csv
-from flask import send_file
 from predict import predict_return_status
 import os
 
 app = Flask(__name__)
 
-CORS(app)
+# Configured CORS to allow all origins, headers, and standard HTTP methods
+CORS(app, resources={r"/*": {
+    "origins": "*",
+    "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    "allow_headers": ["Content-Type", "Authorization"]
+}})
+
+# Global preflight request handler for CORS preflight (OPTIONS) checks
+@app.before_request
+def handle_preflight():
+    if request.method == "OPTIONS":
+        response = app.make_default_options_response()
+        headers = response.headers
+        headers['Access-Control-Allow-Origin'] = '*'
+        headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+        headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
+        return response
 
 @app.route('/user/signup', methods=['POST'])
 def signup():
-    cur=conn.cursor()
+    cur = conn.cursor()
     data = request.json
 
     uname = data['uname']
@@ -23,7 +38,6 @@ def signup():
     pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$'
 
     if not re.match(pattern, upassword):
-
         return jsonify({
             "message": "Password must contain 8 characters, uppercase, lowercase and special character"
         }), 400
@@ -50,6 +64,7 @@ def signup():
     return jsonify({
         "message": "Signup successful"
     })
+
 @app.route('/update-product-details/<int:id>', methods=['PUT'])
 def update_product_details(id):
     cur = conn.cursor()
@@ -69,6 +84,7 @@ def update_product_details(id):
     return jsonify({
         "message": "Updated Successfully"
     })
+
 @app.route('/product/<int:id>', methods=['GET'])
 def get_product(id):
     cur = conn.cursor()
@@ -94,11 +110,12 @@ def get_product(id):
         "product_name": data[1],
         "status": data[2],
         "description": data[3],
-        "image_url":data[4]
+        "image_url": data[4]
     })
+
 @app.route('/export-csv', methods=['GET'])
 def export_csv():
-    cur=conn.cursor()
+    cur = conn.cursor()
 
     cur.execute("""
         SELECT
@@ -116,9 +133,7 @@ def export_csv():
     filename = "returns_export.csv"
 
     with open(filename, "w", newline="") as file:
-
         writer = csv.writer(file)
-
         writer.writerow([
             "Return ID",
             "Customer Name",
@@ -126,16 +141,16 @@ def export_csv():
             "Status",
             "Pincode"
         ])
-
         writer.writerows(data)
 
     return send_file(
         filename,
         as_attachment=True
     )
+
 @app.route('/user/signin', methods=['POST'])
 def signin():
-    cur=conn.cursor()
+    cur = conn.cursor()
     data = request.json
 
     uemail = data['uemail']
@@ -149,9 +164,6 @@ def signin():
     user = cur.fetchone()
 
     if user:
-        # user row = (uid, uname, uemail, upassword, created_at)
-        # Extra fields are additive only - existing callers that just
-        # check response.ok / data.message are unaffected.
         return jsonify({
             "message": "Login successful",
             "uid": user[0],
@@ -162,9 +174,10 @@ def signin():
     return jsonify({
         "message": "Invalid email or password"
     }), 401
+
 @app.route('/update-return', methods=['PUT'])
 def update_return():
-    cur=conn.cursor()
+    cur = conn.cursor()
     data = request.json
 
     cur.execute("""
@@ -185,10 +198,11 @@ def update_return():
 
     conn.commit()
 
-    return jsonify({"message":"Updated"})
+    return jsonify({"message": "Updated"})
+
 @app.route('/delete-return/<int:return_id>', methods=['DELETE'])
 def delete_return(return_id):
-    cur=conn.cursor()
+    cur = conn.cursor()
     cur.execute(
         "DELETE FROM returns WHERE return_request_id = %s",
         (return_id,)
@@ -199,87 +213,71 @@ def delete_return(return_id):
     return jsonify({
         "message": "Record Deleted Successfully"
     })
+
 @app.route('/users', methods=['GET'])
 def get_users():
-    cur=conn.cursor()
+    cur = conn.cursor()
     cur.execute("SELECT uid, uname, uemail, created_at FROM users")
 
     data = cur.fetchall()
 
     return jsonify(data)
+
 @app.route('/user', methods=['POST'])
 def submit():
- cur=conn.cursor()
- data = request.json
+    cur = conn.cursor()
+    data = request.json
 
- customer_name = data['customer_name']
- customer_email = data['customer_email']
- product_name = data['product_name']
- item_id = data['item_id']
- seller_id = data['seller_id']
- dispatch_date = data['dispatch_date']
- delivery_date = data['delivery_date']
- return_reason = data['return_reason']
- return_status = data['return_status']
- reverse_logistics_cost = data['reverse_logistics_cost']
- pickup_pincode = data['pickup_pincode']
+    customer_name = data['customer_name']
+    customer_email = data['customer_email']
+    product_name = data['product_name']
+    item_id = data['item_id']
+    seller_id = data['seller_id']
+    dispatch_date = data['dispatch_date']
+    delivery_date = data['delivery_date']
+    return_reason = data['return_reason']
+    return_status = data['return_status']
+    reverse_logistics_cost = data['reverse_logistics_cost']
+    pickup_pincode = data['pickup_pincode']
 
- cur.execute(
-    """
-    INSERT INTO returns
-    (
-        customer_name,
-        customer_email,
-        product_name,
-        item_id,
-        seller_id,
-        dispatch_date,
-        delivery_date,
-        return_reason,
-        return_status,
-        reverse_logistics_cost,
-        pickup_pincode
+    cur.execute(
+        """
+        INSERT INTO returns
+        (
+            customer_name,
+            customer_email,
+            product_name,
+            item_id,
+            seller_id,
+            dispatch_date,
+            delivery_date,
+            return_reason,
+            return_status,
+            reverse_logistics_cost,
+            pickup_pincode
+        )
+        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+        """,
+        (
+            customer_name,
+            customer_email,
+            product_name,
+            item_id,
+            seller_id,
+            dispatch_date,
+            delivery_date,
+            return_reason,
+            return_status,
+            reverse_logistics_cost,
+            pickup_pincode
+        )
     )
-    VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
-    """,
-    (
-        customer_name,
-        customer_email,
-        product_name,
-        item_id,
-        seller_id,
-        dispatch_date,
-        delivery_date,
-        return_reason,
-        return_status,
-        reverse_logistics_cost,
-        pickup_pincode
-    )
- )
 
- conn.commit()
+    conn.commit()
 
- return jsonify({
-    "message": "Return request submitted successfully"
- })
-
-# =========================================================
-# CUSTOMER PORTAL ENDPOINTS (Phase 1)
-#
-# These are intentionally separate from the older /user and /read
-# endpoints (which remain untouched for the legacy employee pages).
-#
-# No schema changes were required for these:
-#   - "customer_email" already exists on `returns` and is used here
-#     as the join key for "my returns only" (a proper customer_id FK
-#     is a Phase 6 candidate, see chat notes).
-#   - Internal-only columns (seller_id, reverse_logistics_cost, etc.)
-#     are simply left out of the INSERT below, the same way the
-#     original /user endpoint already left several columns unset.
-#   - customer_segment is defaulted to "New" server-side since there
-#     is nowhere yet to look up a real customer segment. Documented
-#     limitation, to be revisited once customer profiles exist.
-# =========================================================
+    return jsonify({
+        "message": "Return request submitted successfully"
+    })
 
 CUSTOMER_RETURN_REQUIRED_FIELDS = [
     'customer_name', 'customer_email', 'product_name', 'item_id',
@@ -294,7 +292,6 @@ CUSTOMER_RETURNS_COLUMNS = [
     "dispatch_date", "delivery_date", "return_reason",
     "return_status", "review_status", "pickup_pincode"
 ]
-
 
 @app.route('/customer/return', methods=['POST'])
 def customer_submit_return():
@@ -331,8 +328,6 @@ def customer_submit_return():
         return jsonify({"message": "Rating and refund amount must be numbers"}), 400
 
     try:
-        # The AI status is computed here, server-side, using the
-        # existing model - the client cannot set return_status itself.
         predicted_status, confidence = predict_return_status(
             product_category=data['product_category'],
             customer_segment="New",
@@ -377,7 +372,6 @@ def customer_submit_return():
             "error": str(e)
         }), 400
 
-
 @app.route('/customer/returns/<email>', methods=['GET'])
 def customer_returns(email):
     try:
@@ -404,21 +398,18 @@ def customer_returns(email):
             "error": str(e)
         }), 400
 
-
 @app.route('/dashboard', methods=['GET'])
 def dashboard():
-    cur=conn.cursor()
+    cur = conn.cursor()
     cur.execute("SELECT COUNT(*) FROM returns")
-    row=cur.fetchone()
-    total=row[0] if row else 0
+    row = cur.fetchone()
+    total = row[0] if row else 0
 
     cur.execute(
         "SELECT COUNT(*) FROM returns WHERE return_status='Pending'"
     )
     row = cur.fetchone()
     pending = row[0] if row else 0
-
-    
 
     cur.execute(
         "SELECT COUNT(*) FROM returns WHERE return_status='Approved'"
@@ -438,9 +429,10 @@ def dashboard():
         "approved": approved,
         "rejected": rejected
     })
+
 @app.route('/read/<int:page>', methods=['GET'])
 def read(page):
-    cur=conn.cursor()
+    cur = conn.cursor()
     limit = 10
     offset = (page - 1) * limit
 
@@ -467,8 +459,7 @@ def read(page):
 
 @app.route('/update', methods=['PUT'])
 def update():
-    cur=conn.cursor()
-
+    cur = conn.cursor()
     data = request.json
 
     regid = data['regid']
@@ -484,9 +475,10 @@ def update():
     return jsonify({
         "message": "Updated successfully"
     })
+
 @app.route('/delete/<regid>', methods=['DELETE'])
 def delete(regid):
-    cur=conn.cursor()
+    cur = conn.cursor()
     cur.execute(
         "DELETE FROM submissions WHERE regid=%s",
         (regid,)
@@ -521,37 +513,6 @@ def predict_return_status_api():
         return jsonify({
             "error": str(e)
         }), 400
-# =========================================================
-# EMPLOYEE PORTAL ENDPOINTS (Phase 2)
-#
-# Everything below is additive - no columns were added or removed.
-# A few honesty notes on what's real vs. approximated, since this
-# is meant to look and behave like a real product, not fake one:
-#
-#   - AI Prediction / Confidence are NOT stored anywhere. They are
-#     computed on-demand by calling predict_return_status() (your
-#     existing model, unmodified) for whichever rows are being shown.
-#     This is fine at this data volume, but it's the reason filtering
-#     "by AI Prediction" is slower than the other filters (see
-#     employee_returns() below) - a stored ai_predicted_status /
-#     ai_confidence column would fix that, and is a good candidate
-#     for the Phase 6 schema discussion.
-#
-#   - "High Risk" is NOT an AI output. There's no risk-scoring model
-#     here - it's a plain heuristic (very low customer rating, or an
-#     unusually large refund) that mirrors the same business rules
-#     your generate_data.py already uses to decide which returns need
-#     manual review. It's labeled as a heuristic in the UI too.
-#
-#   - There is no "created_at" column on `returns`, so the table uses
-#     "Dispatch Date" where a real system would show a submission
-#     timestamp. Also a Phase 6 candidate.
-#
-#   - "Employee Notes" in the details modal is UI-only right now -
-#     there's no column to persist it to, so it is clearly labeled
-#     as not-yet-saved rather than silently discarding what someone
-#     types.
-# =========================================================
 
 HIGH_RISK_SQL = "(customer_rating <= 2 OR refund_amount > 30000)"
 
@@ -587,11 +548,7 @@ EMPLOYEE_RETURNS_SORT_COLUMNS = {
 EMPLOYEE_EDITABLE_RETURN_STATUSES = {"Pending", "Approved", "Rejected"}
 EMPLOYEE_EDITABLE_REVIEW_STATUSES = {"Under Review", "Escalated", "Approved", "Rejected"}
 
-
 def _enrich_with_ai(row):
-    """Attach a live AI prediction + confidence + high-risk flag to a
-    returns row. Uses the same predict_return_status() everything else
-    in this app already uses - no separate model, no retraining."""
     record = dict(zip(EMPLOYEE_RETURNS_COLUMNS, row))
 
     try:
@@ -616,7 +573,6 @@ def _enrich_with_ai(row):
         (refund is not None and float(refund) > 30000)
     )
     return record
-
 
 @app.route('/employee/dashboard-metrics', methods=['GET'])
 def employee_dashboard_metrics():
@@ -648,7 +604,6 @@ def employee_dashboard_metrics():
         })
     except Exception as e:
         return jsonify({"message": "Could not load dashboard metrics", "error": str(e)}), 400
-
 
 @app.route('/employee/analytics', methods=['GET'])
 def employee_analytics():
@@ -682,9 +637,6 @@ def employee_analytics():
         monthly_returns = [{"month": r[0], "count": r[1]} for r in monthly_rows]
         refund_trend = [{"month": r[0], "amount": float(r[2])} for r in monthly_rows]
 
-        # AI Prediction Distribution: computed on the most recent 300 rows
-        # only (running the model on every row on every dashboard load
-        # doesn't scale - see the file-level note above).
         cur.execute("""
             SELECT product_category, customer_segment, return_type,
                    customer_rating, refund_amount, carrier_name
@@ -720,7 +672,6 @@ def employee_analytics():
         })
     except Exception as e:
         return jsonify({"message": "Could not load analytics", "error": str(e)}), 400
-
 
 @app.route('/employee/returns', methods=['GET'])
 def employee_returns():
@@ -775,8 +726,6 @@ def employee_returns():
         cur = conn.cursor()
 
         if ai_prediction_filter != 'All':
-            # ai_prediction isn't a stored column - see file-level note.
-            # Capped at 1000 matching rows to keep this workable.
             cur.execute(f"""
                 SELECT {select_cols} FROM returns
                 {where_clause}
@@ -816,7 +765,6 @@ def employee_returns():
     except Exception as e:
         return jsonify({"message": "Could not load returns", "error": str(e)}), 400
 
-
 @app.route('/employee/returns/<int:return_id>', methods=['GET'])
 def employee_return_detail(return_id):
     try:
@@ -850,7 +798,6 @@ def employee_return_detail(return_id):
         return jsonify(record)
     except Exception as e:
         return jsonify({"message": "Could not load return details", "error": str(e)}), 400
-
 
 @app.route('/employee/returns/<int:return_id>', methods=['PUT'])
 def employee_update_return(return_id):
@@ -898,7 +845,6 @@ def employee_update_return(return_id):
         conn.rollback()
         return jsonify({"message": "Could not update return", "error": str(e)}), 400
 
-
 @app.route('/export-excel', methods=['GET'])
 def export_excel():
     try:
@@ -939,6 +885,6 @@ def export_excel():
     except Exception as e:
         return jsonify({"message": "Could not export Excel file", "error": str(e)}), 400
 
-
 if __name__ == '__main__':
-    app.run( host="0.0.0.0", port=int(os.environ.get("PORT", 5000)),debug=False)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
+    
