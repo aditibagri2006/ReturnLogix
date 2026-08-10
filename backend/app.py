@@ -27,17 +27,21 @@ def handle_preflight():
         headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
         return response
 
+# =========================================================
+# AUTHENTICATION ENDPOINTS
+# =========================================================
+
 @app.route('/user/signup', methods=['POST'])
 def signup():
     cur = conn.cursor()
-    data = request.json
+    data = request.json or {}
 
-    uname = data['uname']
-    uemail = data['uemail']
-    upassword = data['upassword']
+    uname = data.get('uname')
+    uemail = data.get('uemail')
+    upassword = data.get('upassword')
     pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$'
 
-    if not re.match(pattern, upassword):
+    if not upassword or not re.match(pattern, upassword):
         return jsonify({
             "message": "Password must contain 8 characters, uppercase, lowercase and special character"
         }), 400
@@ -65,6 +69,56 @@ def signup():
         "message": "Signup successful"
     })
 
+# Alias route for frontend calling /signup directly
+@app.route('/signup', methods=['POST'])
+def signup_alias():
+    return signup()
+
+
+@app.route('/user/signin', methods=['POST'])
+def signin():
+    cur = conn.cursor()
+    data = request.json or {}
+
+    uemail = data.get('uemail')
+    upassword = data.get('upassword')
+
+    cur.execute(
+        "SELECT * FROM users WHERE uemail=%s AND upassword=%s",
+        (uemail, upassword)
+    )
+
+    user = cur.fetchone()
+
+    if user:
+        return jsonify({
+            "message": "Login successful",
+            "uid": user[0],
+            "uname": user[1],
+            "uemail": user[2]
+        })
+
+    return jsonify({
+        "message": "Invalid email or password"
+    }), 401
+
+# Alias route for frontend calling /signin directly
+@app.route('/signin', methods=['POST'])
+def signin_alias():
+    return signin()
+
+
+@app.route('/users', methods=['GET'])
+def get_users():
+    cur = conn.cursor()
+    cur.execute("SELECT uid, uname, uemail, created_at FROM users")
+    data = cur.fetchall()
+    return jsonify(data)
+
+# =========================================================
+# GENERAL & PRODUCT ENDPOINTS
+# =========================================================
+
 @app.route('/update-product-details/<int:id>', methods=['PUT'])
 def update_product_details(id):
     cur = conn.cursor()
@@ -84,6 +138,7 @@ def update_product_details(id):
     return jsonify({
         "message": "Updated Successfully"
     })
+
 
 @app.route('/product/<int:id>', methods=['GET'])
 def get_product(id):
@@ -113,6 +168,7 @@ def get_product(id):
         "image_url": data[4]
     })
 
+
 @app.route('/export-csv', methods=['GET'])
 def export_csv():
     cur = conn.cursor()
@@ -129,7 +185,6 @@ def export_csv():
     """)
 
     data = cur.fetchall()
-
     filename = "returns_export.csv"
 
     with open(filename, "w", newline="") as file:
@@ -148,37 +203,11 @@ def export_csv():
         as_attachment=True
     )
 
-@app.route('/user/signin', methods=['POST'])
-def signin():
-    cur = conn.cursor()
-    data = request.json
-
-    uemail = data['uemail']
-    upassword = data['upassword']
-
-    cur.execute(
-        "SELECT * FROM users WHERE uemail=%s AND upassword=%s",
-        (uemail, upassword)
-    )
-
-    user = cur.fetchone()
-
-    if user:
-        return jsonify({
-            "message": "Login successful",
-            "uid": user[0],
-            "uname": user[1],
-            "uemail": user[2]
-        })
-
-    return jsonify({
-        "message": "Invalid email or password"
-    }), 401
 
 @app.route('/update-return', methods=['PUT'])
 def update_return():
     cur = conn.cursor()
-    data = request.json
+    data = request.json or {}
 
     cur.execute("""
         UPDATE returns
@@ -200,6 +229,7 @@ def update_return():
 
     return jsonify({"message": "Updated"})
 
+
 @app.route('/delete-return/<int:return_id>', methods=['DELETE'])
 def delete_return(return_id):
     cur = conn.cursor()
@@ -214,19 +244,11 @@ def delete_return(return_id):
         "message": "Record Deleted Successfully"
     })
 
-@app.route('/users', methods=['GET'])
-def get_users():
-    cur = conn.cursor()
-    cur.execute("SELECT uid, uname, uemail, created_at FROM users")
-
-    data = cur.fetchall()
-
-    return jsonify(data)
 
 @app.route('/user', methods=['POST'])
 def submit():
     cur = conn.cursor()
-    data = request.json
+    data = request.json or {}
 
     customer_name = data['customer_name']
     customer_email = data['customer_email']
@@ -279,6 +301,10 @@ def submit():
         "message": "Return request submitted successfully"
     })
 
+# =========================================================
+# CUSTOMER PORTAL ENDPOINTS
+# =========================================================
+
 CUSTOMER_RETURN_REQUIRED_FIELDS = [
     'customer_name', 'customer_email', 'product_name', 'item_id',
     'product_category', 'return_type', 'customer_rating',
@@ -292,6 +318,7 @@ CUSTOMER_RETURNS_COLUMNS = [
     "dispatch_date", "delivery_date", "return_reason",
     "return_status", "review_status", "pickup_pincode"
 ]
+
 
 @app.route('/customer/return', methods=['POST'])
 def customer_submit_return():
@@ -372,6 +399,7 @@ def customer_submit_return():
             "error": str(e)
         }), 400
 
+
 @app.route('/customer/returns/<email>', methods=['GET'])
 def customer_returns(email):
     try:
@@ -398,6 +426,7 @@ def customer_returns(email):
             "error": str(e)
         }), 400
 
+
 @app.route('/dashboard', methods=['GET'])
 def dashboard():
     cur = conn.cursor()
@@ -405,21 +434,15 @@ def dashboard():
     row = cur.fetchone()
     total = row[0] if row else 0
 
-    cur.execute(
-        "SELECT COUNT(*) FROM returns WHERE return_status='Pending'"
-    )
+    cur.execute("SELECT COUNT(*) FROM returns WHERE return_status='Pending'")
     row = cur.fetchone()
     pending = row[0] if row else 0
 
-    cur.execute(
-        "SELECT COUNT(*) FROM returns WHERE return_status='Approved'"
-    )
+    cur.execute("SELECT COUNT(*) FROM returns WHERE return_status='Approved'")
     row = cur.fetchone()
     approved = row[0] if row else 0
 
-    cur.execute(
-        "SELECT COUNT(*) FROM returns WHERE return_status='Rejected'"
-    )
+    cur.execute("SELECT COUNT(*) FROM returns WHERE return_status='Rejected'")
     row = cur.fetchone()
     rejected = row[0] if row else 0
 
@@ -429,6 +452,7 @@ def dashboard():
         "approved": approved,
         "rejected": rejected
     })
+
 
 @app.route('/read/<int:page>', methods=['GET'])
 def read(page):
@@ -457,10 +481,11 @@ def read(page):
         "total": total_records
     })
 
+
 @app.route('/update', methods=['PUT'])
 def update():
     cur = conn.cursor()
-    data = request.json
+    data = request.json or {}
 
     regid = data['regid']
     text = data['text']
@@ -476,6 +501,7 @@ def update():
         "message": "Updated successfully"
     })
 
+
 @app.route('/delete/<regid>', methods=['DELETE'])
 def delete(regid):
     cur = conn.cursor()
@@ -490,10 +516,11 @@ def delete(regid):
         "message": "Deleted successfully"
     })
 
+
 @app.route("/predict-return-status", methods=["POST"])
 def predict_return_status_api():
     try:
-        data = request.get_json()
+        data = request.get_json() or {}
 
         prediction, confidence = predict_return_status(
             product_category=data["product_category"],
@@ -513,6 +540,10 @@ def predict_return_status_api():
         return jsonify({
             "error": str(e)
         }), 400
+
+# =========================================================
+# EMPLOYEE PORTAL ENDPOINTS
+# =========================================================
 
 HIGH_RISK_SQL = "(customer_rating <= 2 OR refund_amount > 30000)"
 
@@ -548,6 +579,7 @@ EMPLOYEE_RETURNS_SORT_COLUMNS = {
 EMPLOYEE_EDITABLE_RETURN_STATUSES = {"Pending", "Approved", "Rejected"}
 EMPLOYEE_EDITABLE_REVIEW_STATUSES = {"Under Review", "Escalated", "Approved", "Rejected"}
 
+
 def _enrich_with_ai(row):
     record = dict(zip(EMPLOYEE_RETURNS_COLUMNS, row))
 
@@ -573,6 +605,7 @@ def _enrich_with_ai(row):
         (refund is not None and float(refund) > 30000)
     )
     return record
+
 
 @app.route('/employee/dashboard-metrics', methods=['GET'])
 def employee_dashboard_metrics():
@@ -604,6 +637,7 @@ def employee_dashboard_metrics():
         })
     except Exception as e:
         return jsonify({"message": "Could not load dashboard metrics", "error": str(e)}), 400
+
 
 @app.route('/employee/analytics', methods=['GET'])
 def employee_analytics():
@@ -672,6 +706,7 @@ def employee_analytics():
         })
     except Exception as e:
         return jsonify({"message": "Could not load analytics", "error": str(e)}), 400
+
 
 @app.route('/employee/returns', methods=['GET'])
 def employee_returns():
@@ -765,6 +800,7 @@ def employee_returns():
     except Exception as e:
         return jsonify({"message": "Could not load returns", "error": str(e)}), 400
 
+
 @app.route('/employee/returns/<int:return_id>', methods=['GET'])
 def employee_return_detail(return_id):
     try:
@@ -798,6 +834,7 @@ def employee_return_detail(return_id):
         return jsonify(record)
     except Exception as e:
         return jsonify({"message": "Could not load return details", "error": str(e)}), 400
+
 
 @app.route('/employee/returns/<int:return_id>', methods=['PUT'])
 def employee_update_return(return_id):
@@ -845,13 +882,14 @@ def employee_update_return(return_id):
         conn.rollback()
         return jsonify({"message": "Could not update return", "error": str(e)}), 400
 
+
 @app.route('/export-excel', methods=['GET'])
 def export_excel():
     try:
         import pandas as pd
     except ImportError:
         return jsonify({
-            "message": "Excel export requires pandas, which this project already uses elsewhere."
+            "message": "Excel export requires pandas."
         }), 500
 
     try:
@@ -878,13 +916,13 @@ def export_excel():
             df.to_excel(filename, index=False, engine="openpyxl")
         except ImportError:
             return jsonify({
-                "message": "Excel export requires the 'openpyxl' package. Run: pip install openpyxl"
+                "message": "Excel export requires the 'openpyxl' package."
             }), 500
 
         return send_file(filename, as_attachment=True)
     except Exception as e:
         return jsonify({"message": "Could not export Excel file", "error": str(e)}), 400
 
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
-    
