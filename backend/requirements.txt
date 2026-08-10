@@ -8,4 +8,4 @@ SQLAlchemy
 psycopg2-binary
 Faker
 openpyxl
-gunicornf
+gunicorn
